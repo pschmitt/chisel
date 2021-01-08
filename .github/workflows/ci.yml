@@ -46,7 +46,9 @@ jobs:
           install: true
       - name: Build
         run: |
-          docker buildx build --push --tag pschmitt/chisel .
+          docker buildx build \
+            --platform linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/ppc64le,linux/s390x,linux/mips64le
+            --push --tag pschmitt/chisel .
 
   # ================
   # RELEASE JOB
