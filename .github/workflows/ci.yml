@@ -30,6 +30,7 @@ jobs:
   docker_build:
     name: Docker multiarch build
     runs-on: ubuntu-latest
+    if: success()
     steps:
       - name: Check out code
         uses: actions/checkout@v2
