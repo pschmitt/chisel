@@ -45,7 +45,7 @@ jobs:
         with:
           install: true
 
-      - if: github.ref == 'refs/heads/main'
+      - if: github.ref == 'refs/heads/master'
         name: Conditional(Set tag to `latest`)
         run: echo "tag=pschmitt/chisel:latest" >> $GITHUB_ENV
 
